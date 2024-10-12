@@ -1,4 +1,4 @@
-import {ICategories} from './ICategories';
+import {ICategories} from '../interface/ICategories';
 
 export class Product {
   id:number;
