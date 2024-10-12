@@ -15,7 +15,7 @@ export class ViewProductComponent implements OnInit {
   // @Input() currentProduct: number | undefined;
   storedId = localStorage.getItem('id');
   // id: number = ;
-
+  totalProduct: number = 1;
   constructor(private productService: ProductService) {
 
   }
@@ -31,6 +31,14 @@ export class ViewProductComponent implements OnInit {
       this.product = data;
     })
 
+  }
+
+  minus(){
+    if(this.totalProduct>1)
+      --this.totalProduct;
+  }
+  add(){
+    ++this.totalProduct;
   }
 
 }
